@@ -1,0 +1,44 @@
+{
+  "name": "contract_starter",
+  "version": "1.0.0",
+  "description": "contract template repository developed by solidity",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install",
+    "build": "forge build",
+    "test": "forge test",
+    "lint:sol": "solhint src/**/*.sol script/**/*.sol test/**/*.sol",
+    "slither": "slither .",
+    "mythril": "docker run -v $(pwd):/code --workdir /code mythril/myth analyze src/*.sol --solc-json mythril.config.json",
+    "format:sol": "prettier --write --plugin=prettier-plugin-solidity src/**/*.sol script/**/*.sol test/**/*.sol",
+    "init": "sh init.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phenix3443/contract_starter.git"
+  },
+  "keywords": [
+    "solidity",
+    "foundry",
+    "smart-contract",
+    "ethereum"
+  ],
+  "author": "phenix3443@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/phenix3443/contract_starter/issues"
+  },
+  "homepage": "https://github.com/phenix3443/contract_starter#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "husky": "^8.0.3",
+    "prettier": "^3.0.2",
+    "prettier-plugin-solidity": "^1.1.3",
+    "solhint": "^3.6.2"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.3",
+    "@openzeppelin/contracts-upgradeable": "^4.9.3"
+  }
+}

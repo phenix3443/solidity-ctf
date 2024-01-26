@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "juanblanco.solidity",
+    "esbenp.prettier-vscode",
+    "tintinweb.solidity-visual-auditor",
+    "foxundermoon.shell-format",
+    "timonwong.shellcheck",
+    "remisa.shellman",
+    "trailofbits.slither-vscode"
+  ]
+}
