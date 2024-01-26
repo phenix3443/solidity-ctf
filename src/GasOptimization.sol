@@ -5,7 +5,7 @@ contract GasOptimization {
     uint256 public total;
 
     // 对内存地址的引用，不管是读、写还是其它操作（比如CALL）只要超过了当前内存的长度，就会带来额外 gas 消耗。在接口中使用 calldata 能减少内存扩展。
-    function sumIfEvenAndLessThan107(uint[] calldata input) external {
+    function sumIfEvenAndLessThan107(uint256[] calldata input) external {
         // 循环内高频写入的状态变量拷贝到内存中。
         uint256 _total = 0;
         // 数组长度input.length 与数组循环变量 input[i]每次循环都会读，而且是从参数中读，可以拷贝到内存当中更加节约 Gas。将数组元素加载到内存.

@@ -1,6 +1,6 @@
 {
   "detectors_to_exclude": "solc-version",
-  "filter_paths": "lib|node_modules",
+  "filter_paths": "lib|node_modules|Reentrancy.sol|Create.sol",
   "solc_remaps": [
     "ds-test/=lib/ds-test/src/",
     "forge-std/=lib/forge-std/src/",
